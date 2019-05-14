@@ -16,9 +16,10 @@ else
     [fn,pn] = uigetfile('*.csv'); 
     dirout = pn; 
 end
+
 filename = fn; 
 if exist(fullfile(dirout,[filename '.mat']),'file')
-    load(filename,'dataraw'); 
+    load(fullfile(dirout,[filename '.mat']),'dataraw');
 else
     fnmread = fullfile(dirout,filename);
     ds = datastore(fnmread);
