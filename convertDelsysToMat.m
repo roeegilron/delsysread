@@ -18,7 +18,7 @@ else
 end
 filename = fn; 
 if exist(fullfile(dirout,[filename '.mat']),'file')
-    load(fileout,'dataraw'); 
+    load(filename,'dataraw'); 
 else
     fnmread = fullfile(dirout,filename);
     ds = datastore(fnmread);
